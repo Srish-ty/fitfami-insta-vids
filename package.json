@@ -1,0 +1,12 @@
+{
+  "name": "fitfami-insta-vids",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Srish-ty/fitfami-insta-vids",
+  "author": "Srishty M <srishtymangutte@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  }
+}
