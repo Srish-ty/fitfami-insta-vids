@@ -7,7 +7,8 @@
   "author": "Srishty M <srishtymangutte@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node --loader ts-node/esm main.ts"
+    "start": "node --loader ts-node/esm main.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
