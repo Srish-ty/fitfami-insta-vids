@@ -15,8 +15,22 @@ interface Media {
 const app = express();
 const PORT = process.env.PORT || 3000;
 const accessToken = process.env.ACCESS_TOKEN;
+const verifyToken = process.env.VERIFY_TOKEN || 'mySecureToken123';  
 
 app.get("/saved", async (req: Request, res: Response) => {
+  const mode = req.query['hub.mode'];
+  const token = req.query['hub.verify_token'];
+  const challenge = req.query['hub.challenge'];
+
+  if (mode && token) {
+    if (mode === 'subscribe' && token === verifyToken) {
+      console.log('Webhook verified');
+      return res.status(200).send(challenge);
+    } else {
+      return res.status(403).send('Forbidden: Incorrect verify token');
+    }
+  }
+
   try {
     if (!accessToken) {
       return res.status(500).json({ error: "Access token not found" });
