@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ESNext",
+      "moduleResolution": "bundler",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "skipLibCheck": true,
+      "resolveJsonModule": true,
+      "allowJs": true,
+      "strict": true,
+      "allowImportingTsExtensions": true, 
+      "noEmit": true,
+    }
+  }
+  
